@@ -1,6 +1,6 @@
 class NeutralCursor
   class << self
-    def load_images window, load_path=File.join(Dir.pwd, 'neutral_cursor/source')
+    def load_images window, load_path=File.join(File.dirname(__FILE__), 'neutral_cursor/source')
       @window = window
       @states = {
         normal:  [4,  5,  Gosu::Image.new( window, File.join(load_path, 'left_ptr.png'))],
